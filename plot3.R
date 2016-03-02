@@ -16,8 +16,7 @@ powerdata2$Date<-as.POSIXct(paste(powerdata2$Date, powerdata2$Time), format="%Y-
 png(filename = "plot3.png",width = 480, height = 480, units = "px")
 
 # plot the meter data
-plot(powerdata2$Date, powerdata2$Sub_metering_1, ylab = "Energy sub metering", xlab = "", type = "n")
-lines(powerdata2$Date, powerdata2$Sub_metering_1, type = "l")
+plot(powerdata2$Date, powerdata2$Sub_metering_1, type = "l", ylab = "Energy sub metering", xlab = "")
 lines(powerdata2$Date, powerdata2$Sub_metering_2, type = "l", col = "red")
 lines(powerdata2$Date, powerdata2$Sub_metering_3, type = "l", col = "blue")
 
