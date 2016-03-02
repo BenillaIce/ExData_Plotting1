@@ -16,10 +16,7 @@ powerdata2$Date<-as.POSIXct(paste(powerdata2$Date, powerdata2$Time), format="%Y-
 png(filename = "plot2.png",width = 480, height = 480, units = "px")
 
 # create a plot with no data visible
-plot(powerdata2$Date, powerdata2$Global_active_power, xlab = "", ylab = "Global active power (kilowatts)", type = "n")
-
-# add line plot
-lines(powerdata2$Date, powerdata2$Global_active_power, type = "l")
+plot(powerdata2$Date, powerdata2$Global_active_power, type="l", xlab="", ylab="Global Active Power (kilowatts)")
 
 # close graphics device
 dev.off()
