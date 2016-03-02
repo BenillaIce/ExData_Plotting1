@@ -1,4 +1,4 @@
-# This file reads some data and plots the three sub meter data sets
+# This file reads some data and plots the histogram of the global active power
 
 # read data
 powerdata<-read.csv("household_power_consumption.txt", sep = ";", na.strings = "?", nrows = 100000)
@@ -16,7 +16,7 @@ powerdata2$Date<-as.POSIXct(paste(powerdata2$Date, powerdata2$Time), format="%Y-
 png(filename = "plot3.png",width = 480, height = 480, units = "px")
 
 # plot the meter data
-plot(powerdata2$Date, powerdata2$Sub_metering_1, type = "l", ylab = "Energy sub metering", xlab = "")
+plot(powerdata2$Date, powerdata2$Sub_metering_1, type="l", ylab = "Energy sub metering", xlab = "")
 lines(powerdata2$Date, powerdata2$Sub_metering_2, type = "l", col = "red")
 lines(powerdata2$Date, powerdata2$Sub_metering_3, type = "l", col = "blue")
 
