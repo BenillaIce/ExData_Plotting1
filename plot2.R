@@ -1,4 +1,4 @@
-# This file reads some data and plots the histogram of the global active power
+# This file reads some data and plots the global active power as time series
 
 # read data
 powerdata<-read.csv("household_power_consumption.txt", sep = ";", na.strings = "?", nrows = 100000)
